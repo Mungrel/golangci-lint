@@ -416,7 +416,8 @@ func (m Manager) GetAllSupportedLinterConfigs() []*linter.Config {
 		linter.NewConfig(golinters.NewGci(gciCfg)).
 			WithSince("v1.30.0").
 			WithPresets(linter.PresetFormatting, linter.PresetImport).
-			WithURL("https://github.com/daixiang0/gci"),
+			WithURL("https://github.com/daixiang0/gci").
+			WithAutoFix(),
 
 		linter.NewConfig(golinters.NewGinkgoLinter(ginkgolinterCfg)).
 			WithSince("v1.51.0").
